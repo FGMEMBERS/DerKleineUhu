@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<PropertyList>
+
+  <path>DerKleineUhu.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/DerKleineUhu/Models/Liveries");
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
+</PropertyList>
