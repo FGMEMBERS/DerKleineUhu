@@ -32,19 +32,50 @@ than 5 decades
 
   <model>
    <path archive="y">Aircraft/DerKleineUhu/Models/DerKleineUhu.xml</path>
+
+   <DerKleineUhu>
+     <gummiseil>
+       <fixed-length-m type="double">30</fixed-length-m>
+       <gummi-min-length-m type="double">10</gummi-min-length-m>
+       <gummi-max-length-m type="double">30</gummi-max-length-m>
+     </gummiseil>
+   </DerKleineUhu>
   </model>
   
   <view>
    <internal archive="y">true</internal>
    <config>
-     <x-offset-m archive="y">0.9</x-offset-m>
-     <y-offset-m archive="y">0</y-offset-m>
-     <z-offset-m archive="y">0.10</z-offset-m>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.3</y-offset-m>
+     <z-offset-m archive="y">1.5</z-offset-m>
      <pitch-offset-deg>-8</pitch-offset-deg>
    </config>
   </view>
+  <chase-distance-m archive="y" type="double">-2.0</chase-distance-m>
 
-  <chase-distance-m archive="y" type="double">-15.0</chase-distance-m>
+  <menubar>
+    <default>
+      <menu n="100">
+        <label>Goodies</label>
+        <enabled type="bool">true</enabled>
+        <item>
+          <label>Select Livery</label>
+          <binding>
+            <command>nasal</command>
+            <script>aircraft.livery.dialog.toggle()</script>
+          </binding>
+        </item>
+        <item>
+          <label>Gummiseil</label>
+          <binding>
+            <command>nasal</command>
+            <script>DerKleineUhu.gummiseil_dialog.toggle()</script>
+          </binding>
+        </item>
+      </menu>
+    </default>
+  </menubar>
+
   <help>
     <title>Der Kleine UHU</title>
   </help>
@@ -61,12 +92,8 @@ than 5 decades
 
  <nasal>
     <DerKleineUhu>
-      <!--
       <file>Aircraft/DerKleineUhu/Nasal/DerKleineUhu.nas</file>
-      -->
-      <script><![CDATA[
-        aircraft.livery.init("Aircraft/DerKleineUhu/Models/Liveries");
-      ]]></script>
     </DerKleineUhu>
   </nasal>
+
 </PropertyList>

@@ -12,4 +12,48 @@
     </unload>
   </nasal>
 
+  <animation>
+    <type>material</type>
+    <object-name>Elevator</object-name>
+    <object-name>Wing</object-name>
+    <object-name>Fuselage</object-name>
+    <object-name>Rudder</object-name>
+    <object-name>Tail</object-name>
+    <object-name>Fin</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>RedWhite.rgb</texture>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Rudder</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>-30.0</factor>
+    <axis>
+      <x1-m>0.680368</x1-m>
+      <y1-m>0</y1-m>
+      <z1-m>0.0961466</z1-m>
+      <x2-m>0.672367</x2-m>
+      <y2-m>0</y2-m>
+      <z2-m>0.0140001</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Elevator</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor>30.0</factor>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+    <center>
+      <x-m>0.700367</x-m>
+      <y-m>0</y-m>
+      <z-m>0.0154368</z-m>
+    </center>
+  </animation>
 </PropertyList>

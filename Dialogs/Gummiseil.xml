@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name>Gummiseil</name>
+  <layout>vbox</layout>
+  <x>-40</x>
+  <y>-40</y>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>1</stretch></empty>
+
+    <text>
+      <label>Gummiseil launcher</label>
+    </text>
+
+    <empty><stretch>1</stretch></empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+
+      <binding>
+        <command>nasal</command>
+        <script>DerKleineUhu.gummiseil_dialog.close()</script>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+  <nasal>
+    <open>
+#      var ammoN = props.globals.getNode("sim/model/bo105/weapons/ammunition", 1);
+#      loop = func {
+#        ammoN.setValue(bo105.get_ammunition());
+#        if (open) {
+#          settimer(loop, 0.2);
+#        }
+#      }
+#      open = 1;
+#      loop();
+    </open>
+
+    <close>
+#      open = 0;
+    </close>
+  </nasal>
+
+#  <group>
+#    <layout>hbox</layout>
+#    <empty><pref-width>4</pref-width></empty>
+#    <checkbox>
+#      <halign>left</halign>
+#      <label>pilot's door</label>
+#      <property>/sim/model/bo105/doors/door[0]/enabled</property>
+#      <live>1</live>
+#      <binding>
+#        <command>dialog-apply</command>
+#      </binding>
+#    </checkbox>
+#    <empty><stretch>1</stretch></empty>
+#  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><pref-width>4</pref-width></empty>
+    <text>
+      <halign>left</halign>
+      <label>fixed length</label>
+    </text>
+    <input>
+      <halign>left</halign>
+      <property>/sim/model/DerKleineUhu/gummiseil/fixed-length-m</property>
+      <live>1</live>
+    </input>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><pref-width>4</pref-width></empty>
+    <text>
+      <halign>left</halign>
+      <label>gummi min</label>
+    </text>
+    <input>
+      <halign>left</halign>
+      <property>/sim/model/DerKleineUhu/gummiseil/gummi-min-length-m</property>
+      <live>1</live>
+    </input>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><pref-width>4</pref-width></empty>
+    <text>
+      <halign>left</halign>
+      <label>spring const</label>
+    </text>
+    <input>
+      <halign>left</halign>
+      <property>/sim/model/DerKleineUhu/gummiseil/spring-constant-Npm</property>
+      <live>1</live>
+    </input>
+  </group>
+
+  <empty><pref-height>3</pref-height></empty>
+</PropertyList>
