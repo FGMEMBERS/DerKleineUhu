@@ -8,7 +8,7 @@ kids 13
 OBJECT poly
 name "Elevator"
 loc 0.429937 0.0064368 -0.000174023
-texture "BlueYellowWhite.rgb"
+texture "RedWhite.rgb"
 crease 45.000000
 numvert 28
 0.335243 0.00800001 -0.15975
@@ -1932,7 +1932,7 @@ kids 0
 OBJECT poly
 name "Wing"
 loc -0.112 0.0741495 0.2725
-texture "BlueYellowWhite.rgb"
+texture "RedWhite.rgb"
 crease 45.000000
 numvert 35
 0.355462 0.0535 -0.8175
@@ -2371,7 +2371,7 @@ kids 0
 OBJECT poly
 name "Fuselage"
 loc -0.126254 -0.00900001 -0.0145
-texture "BlueYellowWhite.rgb"
+texture "RedWhite.rgb"
 crease 45.000000
 numvert 230
 0.184959 0.0259187 0.0075001
@@ -5069,7 +5069,7 @@ kids 0
 OBJECT poly
 name "Rudder"
 loc 0.681304 0.0555003 0
-texture "BlueYellowWhite.rgb"
+texture "RedWhite.rgb"
 crease 45.000000
 numvert 24
 -0.00860775 -0.0385056 0.0121927
@@ -5293,7 +5293,7 @@ kids 0
 OBJECT poly
 name "Tail"
 loc 0.247067 0 0
-texture "BlueYellowWhite.rgb"
+texture "RedWhite.rgb"
 crease 45.000000
 numvert 8
 0.0632999 0.014 -0.003
@@ -10992,7 +10992,7 @@ kids 0
 OBJECT poly
 name "Fin"
 loc -0.114243 -0.0338373 0
-texture "BlueYellowWhite.rgb"
+texture "RedWhite.rgb"
 crease 45.000000
 numvert 14
 0.73811 0.0478373 0.001
