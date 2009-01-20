@@ -51,20 +51,35 @@
     </close>
   </nasal>
 
-#  <group>
-#    <layout>hbox</layout>
-#    <empty><pref-width>4</pref-width></empty>
-#    <checkbox>
-#      <halign>left</halign>
-#      <label>pilot's door</label>
-#      <property>/sim/model/bo105/doors/door[0]/enabled</property>
-#      <live>1</live>
-#      <binding>
-#        <command>dialog-apply</command>
-#      </binding>
-#    </checkbox>
-#    <empty><stretch>1</stretch></empty>
-#  </group>
+  <group>
+    <layout>hbox</layout>
+    <empty><pref-width>4</pref-width></empty>
+    <checkbox>
+      <halign>left</halign>
+      <label>On hook</label>
+      <property>/sim/model/DerKleineUhu/gummiseil/hooked</property>
+      <live>1</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </checkbox>
+    <empty><stretch>1</stretch></empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><pref-width>4</pref-width></empty>
+    <checkbox>
+      <halign>left</halign>
+      <label>RELEASE</label>
+      <property>/sim/model/DerKleineUhu/gummiseil/release</property>
+      <live>1</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </checkbox>
+    <empty><stretch>1</stretch></empty>
+  </group>
 
   <group>
     <layout>hbox</layout>

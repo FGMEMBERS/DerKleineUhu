@@ -170,12 +170,12 @@
     </ground_reactions>
 
     <external_reactions>
-      <property>force/launcher-x</property>
-      <force name="launcher-x" frame="BODY">
-        <function name="force/launcher-x">
-          <description>launcher-force</description>
+      <property>launcher-force-lbs</property>
+      <force name="launcher" frame="BODY">
+        <function name="forces/launcher-force-lbs">
+          <description>the force at the launcher hook</description>
           <product>
-            <property>force/launcher-x</property>
+            <property>launcher-force-lbs</property>
             <value>1</value>
           </product>
         </function>
@@ -185,9 +185,9 @@
           <z>-1</z>
         </location>
         <direction>
-          <x>1</x>
-          <y>0</y>
-          <z>0</z>
+          <x>0</x> <!-- + is heading -->
+          <y>0</y> <!-- + is right -->
+          <z>0</z> <!-- + is down -->
         </direction>
       </force>
     </external_reactions>

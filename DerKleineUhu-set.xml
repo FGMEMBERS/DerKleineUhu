@@ -78,8 +78,15 @@ than 5 decades
 
   <help>
     <title>Der Kleine UHU</title>
+    <key>
+      <name>Ctrl-w</name>
+      <desc>Hook Gummiseil 60m in front of the UHU (on ground)</desc>
+    </key>
+    <key>
+      <name>w</name>
+      <desc>Release the UHU for Gummiseil start</desc>
+    </key>
   </help>
-
  </sim>
 
  <controls>
@@ -95,5 +102,26 @@ than 5 decades
       <file>Aircraft/DerKleineUhu/Nasal/DerKleineUhu.nas</file>
     </DerKleineUhu>
   </nasal>
+
+  <input>
+    <keyboard>
+      <key n="23">
+        <name>Ctrl-w</name>
+        <desc>Hook Gummiseil 60m in front of the UHU (on ground)</desc>
+        <binding>
+          <command>nasal</command>
+          <script>DerKleineUhu.placeGummiseil()</script>
+        </binding>
+      </key>
+      <key n="119">
+        <name>w</name>
+        <desc>Release the UHU for Gummiseil start</desc>
+        <binding>
+          <command>nasal</command>
+          <script>DerKleineUhu.release()</script>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
 
 </PropertyList>
