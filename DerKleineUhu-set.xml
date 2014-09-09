@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Der Kleine UHU - A famous (at least in Germany) model airplane for more
+than 5 decades
+************************************************************************
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Der Kleine UHU (model glider)</description>
+  <author>Torsten Dreyer</author>
+  <aircraft-version>0.1</aircraft-version>
+  <status>alpha</status>
+
+  <startup>
+     <splash-title>Der kleine UHU</splash-title>
+    <splash-texture>Aircraft/DerKleineUhu/DerKleineUhu-splash.png</splash-texture>
+  </startup>
+
+  <flight-model>jsb</flight-model>
+  <aero>DerKleineUhu</aero>
+
+  <sound>
+   <path>Aircraft/Generic/generic-sound.xml</path>
+  </sound>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/DerKleineUhu/Models/DerKleineUhu.xml</path>
+
+   <DerKleineUhu>
+     <gummiseil>
+       <fixed-length-m type="double">30</fixed-length-m>
+       <gummi-min-length-m type="double">10</gummi-min-length-m>
+       <gummi-max-length-m type="double">30</gummi-max-length-m>
+     </gummiseil>
+   </DerKleineUhu>
+  </model>
+  
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.3</y-offset-m>
+     <z-offset-m archive="y">1.5</z-offset-m>
+     <pitch-offset-deg>-8</pitch-offset-deg>
+   </config>
+  </view>
+  <chase-distance-m archive="y" type="double">-2.0</chase-distance-m>
+
+  <menubar>
+    <default>
+      <menu n="100">
+        <label>Goodies</label>
+        <enabled type="bool">true</enabled>
+        <item>
+          <label>Select Livery</label>
+          <binding>
+            <command>nasal</command>
+            <script>aircraft.livery.dialog.toggle()</script>
+          </binding>
+        </item>
+        <item>
+          <label>Gummiseil</label>
+          <binding>
+            <command>nasal</command>
+            <script>DerKleineUhu.gummiseil_dialog.toggle()</script>
+          </binding>
+        </item>
+      </menu>
+    </default>
+  </menubar>
+
+  <help>
+    <title>Der Kleine UHU</title>
+    <key>
+      <name>Ctrl-w</name>
+      <desc>Hook Gummiseil 60m in front of the UHU (on ground)</desc>
+    </key>
+    <key>
+      <name>w</name>
+      <desc>Release the UHU for Gummiseil start</desc>
+    </key>
+  </help>
+ </sim>
+
+ <controls>
+  <flight>
+   <aileron-trim>0.00</aileron-trim>
+   <elevator-trim>0.00</elevator-trim>
+   <rudder-trim>0.00</rudder-trim>
+  </flight>
+ </controls>
+
+ <nasal>
+    <DerKleineUhu>
+      <file>Aircraft/DerKleineUhu/Nasal/DerKleineUhu.nas</file>
+    </DerKleineUhu>
+  </nasal>
+
+  <input>
+    <keyboard>
+      <key n="23">
+        <name>Ctrl-w</name>
+        <desc>Hook Gummiseil 60m in front of the UHU (on ground)</desc>
+        <binding>
+          <command>nasal</command>
+          <script>DerKleineUhu.placeGummiseil()</script>
+        </binding>
+      </key>
+      <key n="119">
+        <name>w</name>
+        <desc>Release the UHU for Gummiseil start</desc>
+        <binding>
+          <command>nasal</command>
+          <script>DerKleineUhu.release()</script>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
+
+</PropertyList>
